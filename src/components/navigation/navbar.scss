@@ -1,0 +1,102 @@
+$color-gray: gray;
+$weight-700: 700;
+
+.container {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  // border: 1px solid black;
+  // align-items: center;
+  position: relative;
+  margin-top: 1rem;
+  // border-radius: 25px;
+  // border: 1px solid black;
+  font-weight: $weight-700;
+  font-size: 1.2rem;
+
+  .logo_name {
+    position: absolute;
+    padding-left: 1.5rem;
+    a {
+      color: black;
+      text-decoration: none;
+    }
+    a:hover {
+      color: $color-gray;
+    }
+  }
+
+  &_menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 3rem;
+    top: -0.5rem;
+
+    .menu_bar {
+      transform: translateX(100%);
+      display: flex;
+      list-style-type: none;
+      position: absolute;
+      transition: transform 500ms ease-in-out;
+      li {
+        margin-right: 1rem;
+      }
+      li a {
+        text-decoration: none;
+        color: black;
+      }
+      li a:hover {
+        color: $color-gray;
+      }
+      @media (max-width: 700px) {
+        left: 17rem;
+        font-size: 1.5rem;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        width: 22rem;
+        height: 999rem;
+        // background-color: green;
+        border: 1px solid black;
+        padding: 4rem;
+      }
+    }
+    //hamburger menu
+    .hamburger_menu {
+      position: fixed;
+      // left: 17rem;
+      right: 3rem;
+      margin: 1rem;
+      display: none;
+      width: 24px;
+      height: 24px;
+      // position: relative;
+      cursor: pointer;
+      .hamburger_top_bar,
+      .hamburger_middle_bar,
+      .hamburger_bottom_bar {
+        width: 100%;
+        height: 2px;
+        background-color: black;
+      }
+      .hamburger_middle_bar {
+        margin-top: 30%;
+      }
+      .hamburger_bottom_bar {
+        margin-top: 40%;
+      }
+
+      // for responsive - toggle between hamburgre icon
+      @media (max-width: 700px) {
+        display: block;
+      }
+    }
+  }
+}
+
+.active {
+  transform: translateX(0%) !important;
+}
