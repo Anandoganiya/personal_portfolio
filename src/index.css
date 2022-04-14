@@ -6,6 +6,9 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: white;
 }
+html{
+  scroll-behavior: smooth;
+}
 *,
 ::after,
 ::before {

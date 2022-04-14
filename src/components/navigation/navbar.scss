@@ -1,28 +1,33 @@
-$color-gray: gray;
+$color-org: #f58634;
 $weight-700: 700;
 
-.container {
-  width: 95%;
-  margin: 0 auto;
-  display: flex;
-  // border: 1px solid black;
-  // align-items: center;
-  position: relative;
-  margin-top: 1rem;
-  // border-radius: 25px;
-  // border: 1px solid black;
-  font-weight: $weight-700;
-  font-size: 1.2rem;
+@mixin background_glassmorphism {
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  // border: 1px solid rgba(255, 255, 255, 0.18);
+}
 
+.container {
+  width: 100%;
+  display: flex;
+  position: fixed;
+  padding: 1rem;
+  font-weight: $weight-700;
+  z-index: 10;
+  @include background_glassmorphism();
+  // border: 1px solid black;
+  font-size: 1.2rem;
   .logo_name {
-    position: absolute;
+    width: 100%;
     padding-left: 1.5rem;
     a {
       color: black;
       text-decoration: none;
     }
     a:hover {
-      color: $color-gray;
+      color: $color-org;
     }
   }
 
@@ -30,15 +35,13 @@ $weight-700: 700;
     width: 100%;
     display: flex;
     justify-content: center;
-    position: relative;
+    position: fixed;
     left: 3rem;
-    top: -0.5rem;
 
     .menu_bar {
-      transform: translateX(100%);
       display: flex;
       list-style-type: none;
-      position: absolute;
+      position: fixed;
       transition: transform 500ms ease-in-out;
       li {
         margin-right: 1rem;
@@ -46,52 +49,73 @@ $weight-700: 700;
       li a {
         text-decoration: none;
         color: black;
+        position: relative;
+      }
+      li a::after {
+        content: "";
+        width: 100%;
+        height: 2px;
+        display: block;
+        position: absolute;
+        background-color: $color-org;
+        opacity: 0;
+        transition: all 160ms ease-in;
+      }
+      li a:hover::after {
+        opacity: 1;
       }
       li a:hover {
-        color: $color-gray;
+        color: $color-org;
       }
       @media (max-width: 700px) {
-        left: 17rem;
+        // background-color: #fff;
+        @include background_glassmorphism();
+        transform: translateX(100%);
+        // position: fixed;
+        right: 0;
+        top: 0;
         font-size: 1.5rem;
-        display: none;
+        // display: flex;
         flex-direction: column;
         align-items: center;
         gap: 2rem;
         width: 22rem;
         height: 999rem;
-        // background-color: green;
-        border: 1px solid black;
+        // border: 2px solid black;
         padding: 4rem;
       }
     }
-    //hamburger menu
-    .hamburger_menu {
-      position: fixed;
-      // left: 17rem;
-      right: 3rem;
-      margin: 1rem;
-      display: none;
-      width: 24px;
-      height: 24px;
-      // position: relative;
-      cursor: pointer;
-      .hamburger_top_bar,
-      .hamburger_middle_bar,
-      .hamburger_bottom_bar {
-        width: 100%;
-        height: 2px;
-        background-color: black;
-      }
-      .hamburger_middle_bar {
-        margin-top: 30%;
-      }
-      .hamburger_bottom_bar {
-        margin-top: 40%;
-      }
-
-      // for responsive - toggle between hamburgre icon
-      @media (max-width: 700px) {
+    // for responsive - toggle between hamburger icon
+    @media (max-width: 700px) {
+      //hamburger menu
+      .hamburger_menu {
+        position: fixed;
+        right: 0.5rem;
+        top: 0;
+        margin: 1rem;
         display: block;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        .hamburger_top_bar,
+        .hamburger_middle_bar,
+        .hamburger_bottom_bar {
+          width: 100%;
+          height: 2px;
+          background-color: black;
+          transform: rotate(0);
+          position: absolute;
+          transition: all 200ms ease-in-out;
+        }
+        .hamburger_top_bar {
+          top: 2%;
+        }
+        .hamburger_middle_bar {
+          top: 50%;
+        }
+        .hamburger_bottom_bar {
+          top: 100%;
+        }
       }
     }
   }
@@ -99,4 +123,13 @@ $weight-700: 700;
 
 .active {
   transform: translateX(0%) !important;
+}
+.hide_line {
+  display: none !important;
+}
+.rotate_top {
+  transform: rotate(54deg) translateY(7px) translateX(5px) !important;
+}
+.rotate_bottom {
+  transform: rotate(125deg) translateY(11px) translateX(-11px) !important;
 }

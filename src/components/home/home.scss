@@ -1,0 +1,86 @@
+.home {
+  // padding-top: 4rem;
+  display: flex;
+  margin: 0 auto;
+  // width: 95%;
+  // width: 100%;
+  // border: 1px solid black;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: xx-large;
+  // border: 1px solid black;
+  // background-image: url("./../../../public/images/beach.jpg");
+  background-color: #ff7700;
+  background-image: url(../../../public/images/svg/pattern.svg);
+  background-repeat: no-repeat;
+  // background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23cc0000' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23aa0000' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23d6002b' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23b10022' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23d9004b' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23b2003d' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23d3006c' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23ac0057' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23c4008c' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%239e0071' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23aa00aa' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23880088' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+  // background-size: cover;
+  // // background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 800px;
+  &_title {
+    // border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    // justify-content: flex-end;
+    align-items: flex-start;
+    line-height: 4rem;
+    // gap: .5rem;
+    font-size: 1.5rem;
+    width: 50%;
+    font-family: inherit;
+    @media (max-width:700px) {
+     width: 100%;   
+    }
+    .title {
+      font-size: 3rem;
+      font-weight: 700;
+      font-family: inherit;
+    }
+    .intro {
+      font-size: 1.5rem;
+      font-weight: 600;
+      font-family: inherit;
+      line-height: 2;
+    }
+    .btn_cv{
+      padding: 1rem 2rem;
+      border-radius: 25px;
+      background-color: #ff7700;
+      font-size: 1rem;
+      font-weight: 700;
+      color:wheat;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      transition: background-color 50ms ease-in;
+     @media (max-width:700px) {
+       margin: 0 auto;
+       margin-top: 1rem;
+     } 
+    }
+    .btn_cv:hover{
+      background-color: #FFD124;
+    }
+    @media (max-width:700px) {
+      line-height: normal;
+      padding: 1rem;
+      .title{
+        font-size: 2rem;
+      }
+    }
+  }
+  @media (max-width: 700px) {
+    flex-direction: column;
+  }
+  // .profile_image {
+  //   width: 500px;
+  //   height: 500px;
+  //   img {
+  //     width: 100%;
+  //   }
+  // }
+}
