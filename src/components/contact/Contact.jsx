@@ -17,7 +17,7 @@ const Contact = () => {
         </form> */}
         <div className='contact_form'>
           I would love to connect!. Feel free to reach out me on my email 
-          <a href="mailo:anandoganiya@gmail.com" className='link'>hi@anand</a>
+          <a href="mailto:anandoganiya@gmail.com" className='link'>hi@anand</a>
         </div>
     </div>
   )

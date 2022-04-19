@@ -9,8 +9,8 @@ const Projects = () => {
         </div>
         <div className='card_container'>
             <div className='card_item'>
-              <img src="/images/beach.jpg" alt="project" />
-              <p>Lorem ipsum dolor sit amet.</p>
+              <img src="/images/bloggingImage.jpeg" alt="project" />
+              <p>Blogging Web App</p>
             </div>
             {/* <div className='card_item'>
               <img src="/images/beach.jpg" alt="project" />

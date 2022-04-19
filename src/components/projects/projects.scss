@@ -27,12 +27,12 @@
       padding: 1rem;
   }
   .card_container{
-      display: grid;
+    display: grid;
       // border: 1px solid black;
       width: 90%;
       margin: 0 auto;
       grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
-    // grid-template-columns: repeat(3,1fr);
+      // grid-template-columns: repeat(3,1fr);
       // align-items: center;
       justify-items: center;
       // gap: 1rem;
@@ -40,8 +40,8 @@
       .card_item{
           background-color: white;
         //   border: 1px solid black;
-          padding: 1rem;
           border-radius: 25px;
+          padding: 1rem;
           outline: 5px solid #FFD93D;;
           width:300px;
           cursor: pointer;
@@ -51,6 +51,9 @@
           img{
               width: 100%;
             }
+            @media (max-width:700px) {
+              border-radius:0;
+            }
         }
         // .card_item:hover{
         //     background-color: #ff7700;
@@ -58,5 +61,5 @@
         @media (max-width:700px) {
           grid-template-columns: 1fr;
         }
+      }
     }
-}

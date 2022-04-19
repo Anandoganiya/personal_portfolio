@@ -11,9 +11,9 @@ const Home = () => {
          front-end developer
         </div>
         <p className='intro'>
-          A front end developer like developing  Web technologies.
+          A front end developer passionate about developing  Web technologies.
         </p>
-        <button className='btn_cv'>Download Resume</button>
+        <a className='resume_download' download href='/assets/resume.pdf'>Download Resume</a>
       </div>
     </div>
   )
