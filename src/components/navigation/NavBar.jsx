@@ -25,19 +25,19 @@ const NavBar = () => {
       <nav className='container_menu'>
         <ul className='menu_bar'ref={menuRef}>
           <li>
-            <a href='#home'>HOME</a>
+            <a href='#home' onClick={()=>toggleHambugerMenu()}>HOME</a>
           </li>
           <li>
-            <a href='#about'>ABOUT</a>
+            <a href='#about' onClick={()=>toggleHambugerMenu()}>ABOUT</a>
           </li>
           <li>
-            <a href='#project'>PROJECTS</a>
+            <a href='#project' onClick={()=>toggleHambugerMenu()}>PROJECTS</a>
           </li>
           <li>
-            <a href='#skills'>SKILLS</a>
+            <a href='#skills' onClick={()=>toggleHambugerMenu()}>SKILLS</a>
           </li>
           <li>
-            <a href='#contact'>CONTACT</a>
+            <a href='#contact' onClick={()=>toggleHambugerMenu()}>CONTACT</a>
           </li>
         </ul>
         <div className='hamburger_menu' onClick={()=>toggleHambugerMenu()}>
