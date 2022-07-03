@@ -10,24 +10,24 @@
   // // background-size: cover;
   background-position: center center;
   width: 100%;
-  height: 500px;
-  @media (max-width:800px) {
+  min-height: 500px;
+  @media (max-width: 800px) {
     height: max-content;
   }
   position: relative;
-  &::before{
-    content: '';
+  &::before {
+    content: "";
     position: absolute;
     width: 90%;
     left: 0;
     right: 0;
     height: 2px;
     display: block;
-    margin:auto;
-    background-color: #FFD93D;
-    color:black;
+    margin: auto;
+    background-color: #ffd93d;
+    color: black;
   }
-  &_info{
+  &_info {
     padding: 2rem;
     display: flex;
     justify-content: center;
@@ -38,13 +38,13 @@
     margin: 0 auto;
     // border:1px solid black;
     // line-height: 3rem;
-    .profile_image{
+    .profile_image {
       width: 150px;
       height: 150px;
       // cursor: pointer;
-      img{
+      img {
         border-radius: 50%;
-        border: 5px solid #FFD93D;
+        border: 5px solid #ffd93d;
         outline: none;
         width: 150px;
         height: 150px;
@@ -52,11 +52,10 @@
         object-position: center;
       }
     }
-    .profile_info{
+    .profile_info {
       margin-top: 1rem;
       font-weight: 600;
       font-size: 1.5rem;
     }
   }
-  
 }

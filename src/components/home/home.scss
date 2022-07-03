@@ -2,6 +2,7 @@
   // padding-top: 4rem;
   display: flex;
   margin: 0 auto;
+  font-family: "Playfair Display", serif;
   // width: 95%;
   // width: 100%;
   // border: 1px solid black;
@@ -32,8 +33,8 @@
     font-size: 1.5rem;
     width: 50%;
     font-family: inherit;
-    @media (max-width:700px) {
-     width: 100%;   
+    @media (max-width: 700px) {
+      width: 100%;
     }
     .title {
       font-size: 3rem;
@@ -43,10 +44,10 @@
     .intro {
       font-size: 1.5rem;
       font-weight: 600;
-      font-family: inherit;
+      font-family: "Poppins", sans-serif;
       line-height: 2;
     }
-    .resume_download{
+    .resume_download {
       // padding: .1rem 1rem;
       padding: 0px 1rem;
       border-radius: 25px;
@@ -54,24 +55,24 @@
       font-size: 1rem;
       font-weight: 700;
       text-decoration: none;
-      color:wheat;
+      color: wheat;
       border: none;
       cursor: pointer;
       box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
       transition: background-color 50ms ease-in;
-      @media (max-width:700px) {
+      @media (max-width: 700px) {
         margin: 0 auto;
         margin-top: 1rem;
         padding: 1rem;
-      } 
+      }
     }
-    .resume_download:hover{
-      background-color: #FFD124;
+    .resume_download:hover {
+      background-color: #ffd124;
     }
-    @media (max-width:700px) {
+    @media (max-width: 700px) {
       line-height: normal;
       padding: 1rem;
-      .title{
+      .title {
         font-size: 2rem;
       }
     }
