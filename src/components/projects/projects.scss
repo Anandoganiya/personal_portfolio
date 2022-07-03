@@ -30,11 +30,9 @@
     display: flex;
     width: 90%;
     margin: 0 auto;
-    justify-content: space-evenly;
-    // gap: 1rem;
-    flex-wrap: wrap;
-    // gap: 1rem;
 
+    justify-content: space-between;
+    flex-wrap: wrap;
     .card_item {
       background-color: white;
       //   border: 1px solid black;

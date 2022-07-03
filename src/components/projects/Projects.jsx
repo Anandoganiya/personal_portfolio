@@ -30,6 +30,14 @@ const Projects = () => {
             <a href="https://github.com/Anandoganiya/Movie-app">GitHub</a>
           </div>
         </div>
+        <div className="card_item">
+          <img src="/images/admin.jpg" alt="project" />
+          <span>Ecommerce Admin Dashboard</span>
+          <div className="links">
+            <a href="https://ecommerce-admin-eta.vercel.app/">visit</a>
+            <a href="https://github.com/Anandoganiya/ecommerce-admin">GitHub</a>
+          </div>
+        </div>
       </div>
     </div>
   );
